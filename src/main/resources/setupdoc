@@ -1,0 +1,28 @@
+POST
+http://localhost:8071/auth-microservice/register
+{
+	"username" : "ambarishk",
+	"password" : "test1234",
+	"firstName" : "Ambarish",
+	"lastName" : "Kashyap",
+	"contactNumber" : "9590423072",
+	"regCode" : "JAVA1234",
+	"role" : "Mentor",
+	"linkedinUrl" : "http://linkedin.com",
+	"yearsOfExperience" : "10"
+}
+
+POST
+http://localhost:8071/auth-microservice/login
+{
+	"username" : "ambarishk",
+	"password" : "test1234"
+}
+
+
+insert into skill values(1, 'Spring Boot', 'Java', 'Spring Boot');
+insert into training values(1,1000.0,10.0,'2020','2020',10000.0,1,1,4,'1001',1,'2019','2019','0',1);
+
+POST
+http://localhost:8072/training-microservice/search
+Spring Boot
