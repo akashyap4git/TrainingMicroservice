@@ -6,6 +6,8 @@ public class TrainingDetails {
 	
 	private String mentorName;
 	
+	private String mentorEmailId;
+	
 	private Float yearsOfExperience;
 	
 	private int noOfCompletedTraining;
@@ -34,6 +36,14 @@ public class TrainingDetails {
 
 	public void setMentorName(String mentorName) {
 		this.mentorName = mentorName;
+	}
+
+	public String getMentorEmailId() {
+		return mentorEmailId;
+	}
+
+	public void setMentorEmailId(String mentorEmailId) {
+		this.mentorEmailId = mentorEmailId;
 	}
 
 	public Float getYearsOfExperience() {

@@ -12,4 +12,6 @@ public interface TrainingService {
 
 	public List<TrainingDetails> getTrainingDetailsBy(Long skillId);
 
+	public void sendMailBy(String emailId, Boolean b);
+
 }

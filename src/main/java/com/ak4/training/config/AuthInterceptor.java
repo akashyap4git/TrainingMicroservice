@@ -23,7 +23,7 @@ public class AuthInterceptor implements HandlerInterceptor {
 	
     public static final String TOKEN_PREFIX = "Bearer ";
     public static final String HEADER_STRING = "Authorization";
-    public static final String AUTH_URL = "http://localhost:8071/auth-microservice/authorize";
+    public static final String AUTH_URL = "http://auth-microservice/auth-microservice/authorize";
     
 	@Autowired
 	private RestTemplate restTemplate;

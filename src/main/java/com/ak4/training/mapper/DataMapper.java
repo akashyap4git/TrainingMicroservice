@@ -26,6 +26,7 @@ public class DataMapper {
 		if(training.getProgress() != 0) {
 			Optional<User> user = mentorDao.findById(training.getMentorId());
 			td.setMentorName(user.get().getFirstName()+" " + user.get().getLastName());
+			td.setMentorEmailId(user.get().getUserName());
 			td.setYearsOfExperience(user.get().getYearsOfExperience());
 			List<Training> training2 = trainingDao.findByMentorId(training.getMentorId());
 			int count = 0;

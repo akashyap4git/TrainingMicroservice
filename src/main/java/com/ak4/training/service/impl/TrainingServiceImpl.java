@@ -13,6 +13,7 @@ import com.ak4.training.entity.Training;
 import com.ak4.training.exception.CourseNotFoundException;
 import com.ak4.training.mapper.DataMapper;
 import com.ak4.training.model.TrainingDetails;
+import com.ak4.training.service.EMailService;
 import com.ak4.training.service.TrainingService;
 
 @Service
@@ -26,6 +27,9 @@ public class TrainingServiceImpl implements TrainingService {
 	
 	@Autowired
 	private DataMapper mapper;
+	
+	@Autowired
+	private EMailService email;
 
 	@Override
 	public TrainingDetails serachTrainingBy(String courseName) {
@@ -51,5 +55,10 @@ public class TrainingServiceImpl implements TrainingService {
 			trainingDetails.add(mapper.mapFrom(training));
 		}
 		return trainingDetails;
+	}
+
+	@Override
+	public void sendMailBy(String emailId, Boolean b) {
+		email.sendEmail(emailId, b);
 	}
 }
